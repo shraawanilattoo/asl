@@ -10,6 +10,8 @@ The system captures live hand gestures through a webcam, isolates the hand using
 
 ---
 
+---
+
 ## Dataset
 
 This project uses the **ASL Alphabet Dataset** available on Kaggle.
@@ -17,6 +19,8 @@ This project uses the **ASL Alphabet Dataset** available on Kaggle.
 Download it here: [https://www.kaggle.com/datasets/grassknoted/asl-alphabet](https://www.kaggle.com/datasets/grassknoted/asl-alphabet)
 
 After downloading, organize the data as follows:
+
+```
 ASL/
 ├── data/
 │   └── asl_alphabet_train/
@@ -27,32 +31,31 @@ ASL/
 ├── models/
 ├── scripts/
 └── hand_landmarker.task
+```
+
 ---
 
 ## Project Structure
+
+```
 ASL/
-├── data/                        # Dataset directory (download separately)
+├── data/                           # Download separately from Kaggle
 ├── models/
-│   ├── cnn_svm_model.joblib     # Trained Linear SVM classifier
-│   ├── cnn_svm_encoder.joblib   # Label encoder
+│   ├── cnn_svm_model.joblib        # Trained Linear SVM classifier
+│   ├── cnn_svm_encoder.joblib      # Label encoder
 │   └── model_performance_report.txt
 ├── scripts/
-│   ├── train.py                 # Training pipeline
-│   ├── asl_realtime.py          # Version 1 — baseline inference
-│   ├── asl_realtime_whitebg.py  # Version 2 — MOG2 background subtraction
-│   └── asl_realtime_v3.py       # Version 3 — MediaPipe landmark segmentation
-└── hand_landmarker.task         # MediaPipe hand landmark model
----
-
-## Requirements
-
-Install all dependencies using:
-
-```bash
-pip install -r requirements.txt
+│   ├── train.py                    # Training pipeline
+│   ├── asl_realtime.py             # Version 1 — baseline inference
+│   ├── asl_realtime_whitebg.py     # Version 2 — MOG2 background subtraction
+│   └── asl_realtime_v3.py          # Version 3 — MediaPipe segmentation
+└── hand_landmarker.task            # MediaPipe hand landmark model
 ```
 
-Or manually install:
+---
+## Requirements
+
+Install all dependencies:
 
 ```bash
 pip install tensorflow
