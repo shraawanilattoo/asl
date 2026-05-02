@@ -1,4 +1,4 @@
-# ASL Real-Time Recognition System
+# Real-Time American Sign Language Recognition Using Hybrid CNN-SVM Architecture
 
 A real-time American Sign Language (ASL) alphabet recognition system that uses a standard webcam as input and delivers audio output of the predicted letter. Built using a hybrid CNN-SVM pipeline combining MobileNetV2 feature extraction with a Linear SVM classifier.
 
